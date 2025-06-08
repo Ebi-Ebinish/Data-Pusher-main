@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "9a3cb808-e67b-42ae-8be9-950019914628",
+		"name": "APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23753799"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"azhar2@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"azhar@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/accounts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_name\": \"azharudeen935-new\",\r\n    \"website\":\"test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/accounts/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/accounts/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_name\": \"azharudeen935\",\r\n    \"website\":\"test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/accounts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create failed case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n    \"website\":\"test.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/accounts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts Member",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/account-members",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account-members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"account_id\":2,\r\n   \"user_id\":1,\r\n   \"role_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/account-members/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account-members",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/account-members/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account-members",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"account_id\":2,\r\n   \"user_id\":1,\r\n   \"role\":\"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/account-members",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"account-members"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destinations",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/destinations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search and Filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/destinations/filter?http_method=GET",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "http_method",
+									"value": "GET"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by account id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/destinations/account/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations",
+								"account",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"account_id\": 2,\r\n  \"url\": \"https://api.example.com/webhook\",\r\n  \"http_method\": \"POST\",\r\n  \"headers\": {\r\n    \"APP_ID\": \"1234APPID1234567\",\r\n    \"APP_SECRET\": \"secretkey\",\r\n    \"ACTION\": \"user.update\",\r\n    \"Content-Type\": \"application/json\",\r\n    \"Accept\": \"*\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/destinations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/destinations/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"account_id\": 2,\r\n  \"url\": \"https://api.example.com/webhook\",\r\n  \"http_method\": \"GET\",\r\n  \"headers\": {\r\n    \"APP_ID\": \"1234APPID1234\",\r\n    \"APP_SECRET\": \"secretkey\",\r\n    \"ACTION\": \"user.update\",\r\n    \"Content-Type\": \"application/json\",\r\n    \"Accept\": \"*\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/destinations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"destinations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/logs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
